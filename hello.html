@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="hii.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">SHOP HOP</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Wishlist</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" id="myinput" placeholder="Items..." name="search" onkeyup="myFunction()">
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+
+
+	
+</head>
+<body>
+ <h1 style="text-align:center;font-family: fantasy;color: black;"> SHOP HOP </h1>
+ <div id="design" class=container >
+
+ 	<figure class="first">
+ 		<img src="hoop.jpg" >
+ 		<figcaption><ul><li class="texti">Hoop Earring</li><li class="textix">$5</li></ul></figcaption>
+ 	    <button class="add-to-cart">Add to Cart</button>
+ 	</figure>
+ 		
+ 	<figure class="first">
+ 		
+ 		<img src="sunglas.jpg" >
+ 		<figcaption><ul><li class="texti">Sun Glasses</li><li class="textix">$5</li></ul></figcaption>
+ 	
+ 	    <button class="add-to-cart">Add to Cart</button>
+ 	</figure>
+ 		
+ 	<figure class="first">
+ 		
+ 		<img src="bag.jpg">
+ 		<figcaption><ul><li class="texti">bag</li><li class="textix">$5</li></ul></figcaption>
+ 	
+ 	    <button class="add-to-cart">Add to Cart</button>
+ 	</figure>
+ 		
+ 		<figure class="first">
+ 		<img src="shoe.jpg" >
+ 		
+ 		<figcaption><ul><li class="texti">Shoe</li><li class="textix">$5</li></ul></figcaption>
+ 	    <button class="add-to-cart">Add to Cart</button>
+ 	</figure>
+ 			
+ 	<figure class="first">
+ 		<img src="girl.jpg" >
+ 		
+ 		<figcaption><ul><li class="texti">Girl Dress</li><li class="textix">$5</li></ul></figcaption>
+        <button class="add-to-cart">Add to Cart</button>	
+ 	</figure>
+ 	<figure class="first">
+ 		<img src="men.jpg" >
+ 		<figcaption><ul><li class="texti">Men Dress</li><li class="textix">$5</li></ul></figcaption>
+ 		<button class="add-to-cart">Add to Cart</button>
+ 	</figure> 		
+ 	
+ </div>
+
+<script>
+function myFunction() {
+    var input, filter;
+    input = document.getElementById("myinput")
+    filter = input.value.toUpperCase();
+    var x=document.getElementById("design").querySelectorAll(".first")
+        for (i = 0; i<6; i++) 
+        {        
+
+        txtValue = x[i].textContent || x[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            x[i].style.display = "";
+        } else {
+            x[i].style.display = "none";
+        }
+    }
+}
+</script>
+</body>
+</html>
